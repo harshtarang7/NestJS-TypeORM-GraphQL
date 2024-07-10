@@ -6,7 +6,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from '../../models/User';
 import { UserSettings } from '../../models/UserSetting';
 import { UserSettingService } from './userSetting.service';
-import { UserController } from './UserController';
 
 @Module({
   imports: [TypeOrmModule.forFeature([User, UserSettings])],
@@ -17,6 +16,6 @@ import { UserController } from './UserController';
     UserSettingResolver,
   ],
   exports: [UserSettingService],
-  controllers: [UserController],
+  controllers: [],
 })
 export class userModule {}
